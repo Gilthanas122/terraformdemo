@@ -5,8 +5,8 @@ resource "aws_instance" "example" {
   connection {
     user = "root"
     type = "ssh"
-    public_key = "${file(AWS_ACCESS_KEY_ID)}"
-    private_key = "${file(AWS_SECRET_ACCESS_KEY)}"
+    public_key = "${AWS_ACCESS_KEY_ID}"
+    private_key = "${AWS_SECRET_ACCESS_KEY}"
     timeout = "2m"
   }
 }
